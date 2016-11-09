@@ -42,7 +42,7 @@ module Eurotas
         "mkdir #{tmp_dir}",
         "git clone #{dest_repo_clone_url} #{dest_local_path}",
         "git clone #{source_repo_clone_url} #{source_local_path}",
-        "rm -rdf #{dest_local_path}/*/"
+        "rm -rdf #{dest_local_path}/*/",
         "git config --global user.name Eurotas",
         "git config --global user.email eurotas@spartaglobal.com",
       ])
