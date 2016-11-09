@@ -44,7 +44,7 @@ module Eurotas
         "git clone #{source_repo_clone_url} #{source_local_path}",
         "rm -rdf #{dest_local_path}/*/",
         "git config --global user.name Eurotas",
-        "git config --global user.email eurotas@spartaglobal.com",
+        "git config --global user.email #{ENV['GITHUB_EMAIL']}"
       ])
 
       # Do the copy

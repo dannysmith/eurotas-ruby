@@ -11,6 +11,7 @@ Set your environment variables in `.env.example` and rename it to `.env`.
 - `FOLDER_MAP` - A regular expression (explained below). Leading and trailing slashes are optional.
 - `GITHUB_USERNAME` - The username of the github account you want to push to the destination repo.
 - `GITHUB_PASSWORD` - The password of the github account you want to push to the destination repo.
+- `GITHUB_EMAIL` - The email address you want to make commits to the destination repo.
 
 You can run the app locally with
 
