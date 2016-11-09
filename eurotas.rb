@@ -81,7 +81,11 @@ module Eurotas
 
     def exec_commands(commands_array)
       commands_array.each do |c|
-        puts "Execute: #{c}"
+        # Redact password for printing
+        if c.include? ENV['GITHUB_PASSWORD']
+          log_cmd = c.gsub(ENV['GITHUB_PASSWORD'], '*' * ENV['GITHUB_PASSWORD'].size)
+        end
+        puts "Execute: #{log_cmd || c}"
         `#{c}`
       end
     end
