@@ -97,7 +97,7 @@ module Eurotas
         match = path.match params[:folder_map]
         if match
           dest_path = File.join(params[:destination], match.captures)
-          commands << "mkdir -p #{dest_path} && cp -rf #{path} #{dest_path}"
+          commands << "mkdir -p #{dest_path} && cp -rf #{path}. #{dest_path}"
         end
       end
       commands
