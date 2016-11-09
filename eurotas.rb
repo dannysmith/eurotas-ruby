@@ -42,6 +42,8 @@ module Eurotas
         "mkdir #{tmp_dir}",
         "git clone #{dest_repo_clone_url} #{dest_local_path}",
         "git clone #{source_repo_clone_url} #{source_local_path}",
+        "git config --global user.name Eurotas",
+        "git config --global user.email eurotas@spartaglobal.com",
       ])
 
       # Do the copy
@@ -55,8 +57,7 @@ module Eurotas
         puts 'Committing and pushing'
         exec_commands([
           "git -C #{dest_local_path} add -A && git -C #{dest_local_path} commit -m 'Eurotas: Updating startercode'",
-          "git -C #{dest_local_path} push origin master",
-          "git -C #{dest_local_path} log --oneline"
+          "git -C #{dest_local_path} push origin master"
         ])
         @webhook_response = {status: 200, message: "Updated Starter Code:\n\n\n#{`git -C #{dest_local_path} log -1 --pretty=oneline -p`}"}
       end
