@@ -40,7 +40,6 @@ module Eurotas
       # Setup
       exec_commands([
         "mkdir #{tmp_dir}",
-        "cd #{tmp_dir}",
         "git clone #{dest_repo_clone_url} #{dest_local_path}",
         "git clone #{source_repo_clone_url} #{source_local_path}",
       ])
