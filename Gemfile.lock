@@ -17,7 +17,7 @@ GEM
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
-    rake (11.3.0)
+    rake (13.0.1)
     rb-readline (0.5.3)
     sinatra (1.4.7)
       rack (~> 1.5)
